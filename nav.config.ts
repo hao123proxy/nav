@@ -6,7 +6,7 @@ const c: IConfig = {
   gitRepoUrl: 'https://github.com/hao123proxy/nav',
 
   // 网站标题
-  title: '发现导航 - 精选实用导航网站',
+  title: ' X 发现导航 - 精选实用导航网站',
 
   // 网站描述
   description: '发现导航 - 精选实用导航网站',

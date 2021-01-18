@@ -3,7 +3,7 @@ import { IConfig } from './src/types'
 // 网站 LOGO 替换根目录下的 logo.png， 务必为 png 后缀
 const c: IConfig = {
   // [必填], 请填写您的仓库地址
-  gitRepoUrl: 'https://github.com/xjh22222228/nav',
+  gitRepoUrl: 'https://github.com/hao123proxy/nav',
 
   // 网站标题
   title: '发现导航 - 精选实用导航网站',

@@ -1,10 +1,5 @@
-<nz-modal
-  [(nzVisible)]="visible"
-  [nzTitle]="getTitle()"
-  [nzOkLoading]="submiting"
-  (nzOnCancel)="hanldeCancel()"
-  (nzOnOk)="handleOk()"
->
+<nz-modal [(nzVisible)]="visible" [nzTitle]="getTitle()" [nzOkLoading]="submiting" (nzOnCancel)="hanldeCancel()"
+  (nzOnOk)="handleOk()">
   <ng-container *nzModalContent>
     <div *ngIf="isLogin; else ab">
       <p><b>请完成所有添加后点击右下角将所有数据同步到远端！</b></p>
@@ -20,17 +15,9 @@
         <nz-form-item *ngIf="radioType !== '1'">
           <nz-form-label [nzSpan]="4" nzRequired>一级分类</nz-form-label>
           <nz-form-control [nzSpan]="20" nzErrorTip="请选择一级分类">
-            <nz-select
-              formControlName="oneSelect"
-              nzShowSearch
-              nzPlaceHolder="请选择一级分类"
-              (ngModelChange)="hanldeOneSelect($event)"
-            >
-              <nz-option
-                *ngFor="let item of websiteList"
-                [nzLabel]="item.title"
-                [nzValue]="item.title"
-              >
+            <nz-select formControlName="oneSelect" nzShowSearch nzPlaceHolder="请选择一级分类"
+              (ngModelChange)="hanldeOneSelect($event)">
+              <nz-option *ngFor="let item of websiteList" [nzLabel]="item.title" [nzValue]="item.title">
               </nz-option>
             </nz-select>
           </nz-form-control>
@@ -39,17 +26,9 @@
         <nz-form-item *ngIf="radioType === '3' || radioType === '6'">
           <nz-form-label [nzSpan]="4" nzRequired>二级分类</nz-form-label>
           <nz-form-control [nzSpan]="20" nzErrorTip="请选择二级分类">
-            <nz-select
-              formControlName="twoSelect"
-              nzShowSearch
-              nzPlaceHolder="请选择二级分类"
-              (ngModelChange)="hanldeTwoSelect($event)"
-            >
-              <nz-option
-                *ngFor="let item of twoList"
-                [nzLabel]="item.title"
-                [nzValue]="item.title"
-              >
+            <nz-select formControlName="twoSelect" nzShowSearch nzPlaceHolder="请选择二级分类"
+              (ngModelChange)="hanldeTwoSelect($event)">
+              <nz-option *ngFor="let item of twoList" [nzLabel]="item.title" [nzValue]="item.title">
               </nz-option>
             </nz-select>
           </nz-form-control>
@@ -58,16 +37,8 @@
         <nz-form-item *ngIf="radioType === '6'">
           <nz-form-label [nzSpan]="4" nzRequired>三级分类</nz-form-label>
           <nz-form-control [nzSpan]="20" nzErrorTip="请选择三级分类">
-            <nz-select
-              formControlName="threeSelect"
-              nzShowSearch
-              nzPlaceHolder="请选择三级分类"
-            >
-              <nz-option
-                *ngFor="let item of threeList"
-                [nzLabel]="item.title"
-                [nzValue]="item.title"
-              >
+            <nz-select formControlName="threeSelect" nzShowSearch nzPlaceHolder="请选择三级分类">
+              <nz-option *ngFor="let item of threeList" [nzLabel]="item.title" [nzValue]="item.title">
               </nz-option>
             </nz-select>
           </nz-form-control>
@@ -91,7 +62,8 @@
           <nz-form-label [nzSpan]="4">图标地址</nz-form-label>
           <nz-form-control [nzSpan]="20">
             <nz-input-group [nzPrefix]="prefixIcon">
-              <input formControlName="icon" nz-input placeholder="https://example.com/favicon.png" (blur)="onIconBlur($event)" />
+              <input formControlName="icon" nz-input placeholder="https://example.com/favicon.png"
+                (blur)="onIconBlur($event)" />
             </nz-input-group>
 
             <ng-template #prefixIcon>
@@ -112,9 +84,6 @@
     <ng-template #ab>
       <p>请在下方输入您的TOKEN进行登录校验</p>
       <input nz-input placeholder="请输入TOKEN" [(ngModel)]="token" maxlength="100" autofocus />
-      <p style="margin-top: 15px;">
-        不知道Token如何获取？<a href="https://github.com/xjh22222228/nav#%E9%83%A8%E7%BD%B2" target="_blank">请先阅读我们的指南</a>
-      </p>
     </ng-template>
   </ng-container>
 </nz-modal>

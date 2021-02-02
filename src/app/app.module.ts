@@ -31,7 +31,6 @@ import WebpComponent from '../view/app/default/app.component'
 import { FixbarComponent } from '../components/fixbar/index.component'
 import { MultipleSiteComponent } from '../components/multiple-site/index.component'
 import { FooterComponent } from '../components/footer/footer.component'
-import { IconGitComponent } from '../components/icon-git/icon-git.component'
 import { NoDataComponent } from '../components/no-data/no-data.component'
 import { SearchEngineComponent } from '../components/search-engine/search-engine.component';
 import { CreateComponent } from '../components/create/create.component';
@@ -47,15 +46,15 @@ import { DropdownComponent } from '../components/dropdown/dropdown.component'
 registerLocaleData(zh);
 
 const appRoutes: Routes = [
-  { 
+  {
     path: 'sim',
     component: SimComponent,
   },
-  { 
+  {
     path: 'light',
     component: LightComponent,
   },
-  { 
+  {
     path: 'app',
     component: WebpComponent,
   },
@@ -75,7 +74,6 @@ const appRoutes: Routes = [
     FixbarComponent,
     MultipleSiteComponent,
     FooterComponent,
-    IconGitComponent,
     NoDataComponent,
     SearchEngineComponent,
     CreateComponent,

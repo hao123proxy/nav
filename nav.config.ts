@@ -65,7 +65,7 @@ const c: IConfig = {
 
   // 百度统计地址
   // https://tongji.baidu.com/web/welcome/login
-  baiduStatisticsUrl: 'https://hm.baidu.com/hm.js?4582be7af7e7c95ef75351e07c6c32ba',
+  baiduStatisticsUrl: '',
 
   // CNZZ 统计地址
   // https://www.cnzz.com/o_index.php?
